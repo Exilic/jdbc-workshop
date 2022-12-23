@@ -1,4 +1,6 @@
-package org.example.models;
+package org.example.dao;
+
+import org.example.model.City;
 
 import java.util.List;
 

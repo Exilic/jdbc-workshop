@@ -1,4 +1,4 @@
-package org.example.models;
+package org.example.model;
 
 public class City {
 
@@ -7,6 +7,17 @@ public class City {
     private String CountryCode;
     private String District;
     private int Population;
+
+    public City() {
+    }
+
+    public City(int ID, String name, String countryCode, String district, int population) {
+        this.ID = ID;
+        Name = name;
+        CountryCode = countryCode;
+        District = district;
+        Population = population;
+    }
 
     public int getID() {
         return ID;
