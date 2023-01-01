@@ -38,6 +38,26 @@ public class Main {
 
         System.out.println("--------------");
 
+        City newCity = new City("Good", "DOM", "Puerta Plata", 1310);
+        City storedCity = cityDaoJDBC.add(newCity);
+        System.out.println(storedCity.getName());
 
+        System.out.println("--------------");
+
+        City cityToUpdate = new City(4082, "Grellic", "DOM", "Puerta Plata", 1530);
+        City cityAdded = cityDaoJDBC.update(cityToUpdate);
+        System.out.println(cityAdded.getName());
+        System.out.println(cityAdded.getCountryCode());
+        System.out.println(cityAdded.getDistrict());
+        System.out.println(cityAdded.getPopulation());
+
+        System.out.println("--------------");
+
+
+        City cityToDelete = new City(4082, "Grellic", "DOM", "Puerta Plata", 1530);
+        int cityDeleted = cityDaoJDBC.delete(cityToDelete);
+        System.out.println(cityDeleted == 1 ? "City was deleted" : "City wasn't deleted" );
+
+        System.out.println("--------------");
     }
 }

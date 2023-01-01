@@ -11,6 +11,12 @@ public class City {
     public City() {
     }
 
+    public City(String name, String countryCode, String district, int population) {
+        Name = name;
+        CountryCode = countryCode;
+        District = district;
+        Population = population;
+    }
     public City(int ID, String name, String countryCode, String district, int population) {
         this.ID = ID;
         Name = name;
